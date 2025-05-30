@@ -1,0 +1,11 @@
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\bin\Debug\net8.0\Books.Services.deps.json
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\bin\Debug\net8.0\Books.Services.dll
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\bin\Debug\net8.0\Books.Services.pdb
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\Books.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\Books.Services.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\Books.Services.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\Books.Services.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\Books.Services.dll
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\refint\Books.Services.dll
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\Books.Services.pdb
+C:\Users\Admin\Desktop\Summer-Internship\Books.Services\obj\Debug\net8.0\ref\Books.Services.dll
