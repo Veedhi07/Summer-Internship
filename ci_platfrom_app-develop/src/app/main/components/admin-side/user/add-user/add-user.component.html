@@ -1,0 +1,106 @@
+<div class="container-fluid">
+    <app-sidebar></app-sidebar>
+    <div class="content">
+        <app-header></app-header>
+        <div class="info">
+            <div class="card">
+                <div class="card-header">
+                    Add User
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="firstName" class="col-form-label">First Name</label>
+                            <input id="firstName" type="text" class="form-control" formControlName="firstName" 
+                                   placeholder="First name" autofocus autocomplete="given-name">
+                            <span class="text-danger mb-0" *ngIf="firstName.invalid && (firstName.touched || formValid)">
+                                Please Enter FirstName
+                            </span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" class="col-form-label">Last Name (Surname)</label>
+                            <input id="lastName" type="text" class="form-control" formControlName="lastName" 
+                                   placeholder="Last Name" autocomplete="family-name">
+                            <span class="text-danger" *ngIf="lastName.invalid && (lastName.touched || formValid)">
+                                Please Enter LastName
+                            </span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phoneNumber" class="col-form-label">Phone Number</label>
+                            <input id="phoneNumber" type="tel" class="form-control" formControlName="phoneNumber" 
+                                   placeholder="Phone Number" autocomplete="tel">
+                            <span class="text-danger" *ngIf="phoneNumber.invalid && (phoneNumber.touched || formValid)">
+                                <span *ngIf="phoneNumber.errors?.['required']">
+                                    Please Enter PhoneNumber
+                                </span>
+                                <span *ngIf="phoneNumber.errors?.['minlength'] || phoneNumber.errors?.['maxlength']">
+                                    Please Enter Valid PhoneNumber (10 digits)
+                                </span>
+                            </span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="emailAddress" class="col-form-label">Email Address</label>
+                            <input id="emailAddress" type="email" class="form-control" formControlName="emailAddress" 
+                                   placeholder="Email Address" autocomplete="email">
+                            <span class="text-danger" *ngIf="emailAddress.invalid && (emailAddress.touched || formValid)">
+                                <span *ngIf="emailAddress.hasError('required')">
+                                    Please Enter EmailAddress
+                                </span>
+                                <span *ngIf="emailAddress.hasError('email')">
+                                    Please Enter Valid EmailAddress
+                                </span>
+                            </span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password</label>
+                            <input id="password" type="password" class="form-control" formControlName="password" 
+                                   placeholder="Password" autocomplete="new-password">
+                            <span class="text-danger" *ngIf="password.invalid && (password.touched || formValid)">
+                                <span *ngIf="password.errors?.['required']">
+                                    Please Enter Password
+                                </span>
+                                <span *ngIf="password.errors?.['minlength']">
+                                    Password should be at least 5 characters
+                                </span>
+                                <span *ngIf="password.errors?.['maxlength']">
+                                    Password should not exceed 10 characters
+                                </span>
+                                <span *ngIf="password.errors?.['pattern']">
+                                    Password must contain at least one letter and one number
+                                </span>
+                            </span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword" class="col-form-label">Confirm Password</label>
+                            <input id="confirmPassword" type="password" class="form-control" 
+                                   formControlName="confirmPassword" placeholder="Confirm Password" 
+                                   autocomplete="new-password">
+                            <span class="text-danger" *ngIf="confirmPassword.invalid && (confirmPassword.touched || formValid)">
+                                <span *ngIf="confirmPassword.hasError('required')">
+                                    Please Enter Confirm Password
+                                </span>
+                            </span>
+                            <span class="text-danger" *ngIf="registerForm.hasError('notmatched') && confirmPassword.valid">
+                                Password and Confirm Password not matched
+                            </span>
+                        </div>
+                        
+                        <div class="row justify-content-end mt-5">
+                            <button type="button" class="btnCancel" (click)="onCancel()">
+                                <span class="cancel">Cancel</span>
+                            </button>
+                            <button type="submit" class="btnSave" [disabled]="registerForm.invalid">
+                                <span class="Login">Add User</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
